@@ -33,6 +33,10 @@ body {
 	line-height: 1;
 }
 
+.social{
+	display: flex;
+	justify-content: center;
+}
 ol, ul {
 	list-style: none;
 }
@@ -83,7 +87,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #252122;
+		background: #ffffff;
 		background-image: url("images/bg02.png");
 	}
 
@@ -2800,6 +2804,7 @@ input, select, textarea {
 
 			ul.social li {
 				margin: 0 0.5em 0.75em 0;
+				
 			}
 
 		/* Icons */
