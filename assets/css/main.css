@@ -33,9 +33,17 @@ body {
 	line-height: 1;
 }
 
-.social{
+.social, .contact{
 	display: flex;
 	justify-content: center;
+}
+.contact-button{
+	display: flex; 
+	justify-content: center;
+	height: 4rem;
+	background-color: #ff8b45;
+	font-size: large;
+	
 }
 ol, ul {
 	list-style: none;
@@ -88,7 +96,7 @@ input, select, textarea {
 
 	body {
 		background: #ffffff;
-		background-image: url("images/bg02.png");
+		/* background-image: url("images/bg02.png"); */
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -145,6 +153,10 @@ input, select, textarea {
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 		color: inherit;
 		text-decoration: none;
+	}
+
+	h1 {
+		font-size: 2em;;
 	}
 
 	h2 {
@@ -1556,6 +1568,27 @@ input, select, textarea {
 			top: 1em;
 			margin: 0 0 3em 0;
 		}
+		.title-header {
+			display: flex; 
+			justify-content: center;
+			margin-bottom: 3rem;
+		}
+
+		.chip {
+			display: inline-block;
+			padding: 0 25px;
+			height: 50px;
+			font-size: 16px;
+			line-height: 50px;
+			border-radius: 25px;
+			background-color: #91c640;
+			color: white;
+			margin-bottom: 1rem;
+		}
+
+		.content {
+			height: 18rem;
+		}
 
 			header.major h2 {
 				background: #fff;
@@ -1899,7 +1932,6 @@ input, select, textarea {
 		padding-left: 0;
 		overflow: hidden;
 		cursor: default;
-		margin: 0 0 3.25em 0;
 	}
 
 		ul.social li {
@@ -2192,6 +2224,16 @@ input, select, textarea {
 				font-size: 2em;
 			}
 
+			.profile-photo {
+				transform: rotate(270deg);
+				border-radius: 3rem;
+				margin: 1.5rem 0;
+			}
+
+			.picture-text{
+				font-weight: bold;
+			}
+
 /* Intro */
 
 	#intro {
@@ -2253,7 +2295,7 @@ input, select, textarea {
 
 	#main {
 		position: relative;
-		background: #f7f7f7 url("images/bg02.png");
+		background: #f7f7f7;
 		padding: 4em 0 4em 0;
 	}
 
@@ -2263,14 +2305,14 @@ input, select, textarea {
 			top: 0;
 			left: 0;
 			width: 100%;
-			background: url("images/bg01.png");
+			/* background: url("images/bg01.png"); */
 			background-size: 100% 100%;
 			z-index: 0;
 			opacity: 0.1;
 		}
 
 		#main .major h2 {
-			background: #f7f7f7 url("images/bg02.png");
+			background: #f7f7f7 ;
 		}
 
 /* Footer */
@@ -2287,7 +2329,7 @@ input, select, textarea {
 			top: 0;
 			left: 0;
 			width: 100%;
-			background: url("images/bg01.png");
+			/* background: url("images/bg01.png"); */
 			background-size: 100% 100%;
 			z-index: 0;
 			opacity: 0.5;
@@ -2381,7 +2423,6 @@ input, select, textarea {
 		/* Banner */
 
 			#banner {
-				padding: 6em 0;
 				margin: 3em 0 0 0;
 			}
 
@@ -2608,7 +2649,7 @@ input, select, textarea {
 				width: 275px;
 				z-index: 10002;
 				color: #858484;
-				background-image: url("images/bg02.png");
+				/* background-image: url("images/bg02.png"); */
 				box-shadow: inset -3px 0px 5px 0px rgba(0, 0, 0, 0.35);
 			}
 
