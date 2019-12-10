@@ -254,6 +254,7 @@ input, select, textarea {
 
 		.row.aln-center {
 			justify-content: center;
+			
 		}
 
 		.row.aln-right {
@@ -1572,17 +1573,23 @@ input, select, textarea {
 			display: flex; 
 			justify-content: center;
 			margin-bottom: 3rem;
+		} 
+		
+		.skills-container {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			box-sizing: border-box;
+			align-items: stretch;
 		}
 
 		.chip {
-			display: inline-block;
+			text-align: center;
 			padding: 0 25px;
 			height: 50px;
 			font-size: 16px;
 			line-height: 50px;
-			border-radius: 25px;
-			background-color: #91c640;
-			color: white;
+			color: black;
 			margin-bottom: 1rem;
 		}
 
@@ -2218,20 +2225,22 @@ input, select, textarea {
 
 			#banner header p {
 				color: #d52349;
-				
 				font-style: normal;
 				margin: 0;
 				font-size: 2em;
 			}
 
-			.profile-photo {
-				transform: rotate(270deg);
-				border-radius: 3rem;
-				margin: 1.5rem 0;
+			.picture-container {
+				display: flex;
+				justify-content: center;
 			}
+			
 
-			.picture-text{
+			.picture-text {
 				font-weight: bold;
+				flex-wrap: wrap;
+				max-width: 350px;
+				box-sizing: border-box;
 			}
 
 /* Intro */
@@ -2424,6 +2433,7 @@ input, select, textarea {
 
 			#banner {
 				margin: 3em 0 0 0;
+				
 			}
 
 		/* Intro */
