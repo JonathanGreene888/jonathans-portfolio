@@ -41,7 +41,16 @@ body {
 	display: flex; 
 	justify-content: center;
 	height: 4rem;
-	background-color: #ff8b45;
+	background-color:rgb(18, 137, 189);
+	font-size: large;
+	
+}
+
+.contact-button:hover{
+	display: flex; 
+	justify-content: center;
+	height: 4rem;
+	background-color:rgb(22, 97, 129);
 	font-size: large;
 	
 }
@@ -2099,7 +2108,7 @@ input, select, textarea {
 	}
 
 		#header h1 {
-			color: #252122;
+			color: #fff;
 			font-weight: 900;
 			font-size: 2.5em;
 			letter-spacing: -0.035em;
@@ -2128,7 +2137,7 @@ input, select, textarea {
 
 				#nav > ul > li > a {
 					border-radius: 5px;
-					color: #5d5d5d;
+					color: #fff;
 					text-decoration: none;
 					padding: 0.6em 1.2em 0.6em 1.2em;
 					-moz-transition: background-color .25s ease-in-out;
@@ -2144,7 +2153,7 @@ input, select, textarea {
 
 				#nav > ul > li.current > a {
 					background: #d52349;
-					color: #fff !important;
+					color: #fff ;
 					font-weight: 700;
 				}
 
@@ -2199,7 +2208,7 @@ input, select, textarea {
 /* Banner */
 
 	#banner {
-		background: #CCE8F4 url("../../images/pic01.jpg");
+		background: rgb(18, 137, 189);
 		background-position: center center;
 		background-size: auto 100%;
 		background-repeat: no-repeat;
@@ -2210,7 +2219,6 @@ input, select, textarea {
 	}
 
 		#banner header {
-			background-color: rgba(34, 30, 31, 0.98);
 			display: inline-block;
 			padding: 2.5em 5em;
 			border-radius: 5px;
@@ -2224,7 +2232,7 @@ input, select, textarea {
 			}
 
 			#banner header p {
-				color: #d52349;
+				color: #fff;
 				font-style: normal;
 				margin: 0;
 				font-size: 2em;
@@ -2234,6 +2242,15 @@ input, select, textarea {
 				display: flex;
 				justify-content: center;
 			}
+
+			.name {
+				color: #fff;
+			}
+
+			.title {
+				color: #fff;
+				margin-bottom: 1rem;
+			}
 			
 
 			.picture-text {
@@ -2241,6 +2258,7 @@ input, select, textarea {
 				flex-wrap: wrap;
 				max-width: 350px;
 				box-sizing: border-box;
+				color: #fff
 			}
 
 /* Intro */
@@ -2314,7 +2332,6 @@ input, select, textarea {
 			top: 0;
 			left: 0;
 			width: 100%;
-			/* background: url("images/bg01.png"); */
 			background-size: 100% 100%;
 			z-index: 0;
 			opacity: 0.1;

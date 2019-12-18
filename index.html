@@ -17,9 +17,9 @@
 				<section>
 					<!-- Banner -->
 						<section id="banner">
-						<h1> Jonathans Portfolio</h1>
-						<h2>React Developer</h2>
-						<div class="picture-container"><p class="picture-text"> a life long learner that is living his dream of being a developer bringing peoples visions to life to create an amazing experience for all. </p> </div>
+						<h1 class="name"> Jonathan Greene</h1>
+						<h3 class="title" >React Developer</h3>
+						<div class="picture-container"><p class="picture-text"> a life long learner that is living his dream of being a developer, bringing peoples visions to life, and creating amazing experiences for all. </p> </div>
 						
 					</section>
 			<!-- Main -->
@@ -129,9 +129,21 @@
 									</section>
 							</div>
 							<div class="col-12">
-								<ul class="contact">
-										<button class="contact-button" onclick=""> Recruit my new employee! </button>
-								</ul>
+								<form name="contact" method="POST" data-netlify="true">
+									<p>
+									  <label>Name: <input type="text" name="name" /></label>   
+									</p>
+									<p>
+									  <label>Email: <input type="email" name="email" /></label>
+									</p>
+									<p>
+									  <label>Message: <textarea name="message"></textarea></label>
+									</p>
+									  <ul class="contact">
+										<button type="submit" class="contact-button"> Contact me! </button>
+									  </ul>
+								  </form>
+								
 								
 							</div>
 							<div class="col-12">
