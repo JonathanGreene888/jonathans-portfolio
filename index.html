@@ -14,18 +14,22 @@
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
 			<!-- Header -->
-				<section>
+				<section id="header">
+					<nav id="nav">
 						<ul>
+							<li class="current"> <a href="#home">Home</a> </li>
 							<li> <a href="#skills">Skills</a> </li>
 							<li> <a href="#projects">Projects</a> </li>
 							<li> <a href="#contact">Contact</a> </li>
 						</ul>
+					</nav>
+						
 					
 					<!-- Banner -->
 						<section id="banner">
 						<h1 class="name"> Jonathan Greene</h1>
 						<h3 class="title" >React Developer</h3>
-						<div class="picture-container"><p class="picture-text"> a life long learner that is living his dream of being a developer, bringing peoples visions to life, and creating amazing experiences for all. </p> </div>
+						<div class="picture-container"><p class="picture-text"> A life long learner that is living his dream of being a developer, bringing peoples visions to life, and creating amazing experiences for all. </p> </div>
 						
 					</section>
 			<!-- Main -->
@@ -136,13 +140,13 @@
 							</div>
 							<div id="contact" class="col-12">
 								<form name="contact" method="POST" data-netlify="true">
-									<p>
+									<p class="contact-field">
 									  <label>Name: <input type="text" name="name" /></label>   
 									</p>
-									<p>
+									<p class="contact-field">
 									  <label>Email: <input type="email" name="email" /></label>
 									</p>
-									<p>
+									<p class="contact-field">
 									  <label>Message: <textarea name="message"></textarea></label>
 									</p>
 									  <ul class="contact">
