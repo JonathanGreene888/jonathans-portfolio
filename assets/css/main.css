@@ -97,6 +97,13 @@ input, select, textarea {
 
 	html {
 		box-sizing: border-box;
+		scroll-behavior: smooth;
+	}
+
+	@media screen and (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
 	}
 
 	*, *:before, *:after {
@@ -1776,12 +1783,20 @@ input, select, textarea {
 /* List */
 
 	ul {
-		list-style: disc;
-		padding-left: 1em;
+		list-style: none;
+		display: flex;
+		align-items: center;
+		height: 4rem;
+		margin-bottom: 0;
+		
 	}
 
-		ul li {
-			padding-left: 0.5em;
+		
+		ul li a {
+			padding-left: 1rem;
+			text-decoration: none;
+			color:  rgb(18, 137, 189);
+			font-size: 2rem;
 		}
 
 	ol {
@@ -2215,7 +2230,6 @@ input, select, textarea {
 		text-align: center;
 		position: relative;
 		padding: 4em 0;
-		margin: 4em 0 0 0;
 	}
 
 		#banner header {
@@ -2448,10 +2462,7 @@ input, select, textarea {
 
 		/* Banner */
 
-			#banner {
-				margin: 3em 0 0 0;
-				
-			}
+			
 
 		/* Intro */
 
@@ -2602,6 +2613,15 @@ input, select, textarea {
 				-ms-transition: -ms-transform 0.5s ease;
 				transition: transform 0.5s ease;
 				padding-bottom: 1px;
+			}
+
+			.nav-bar {
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				border: 1px solid red;
+				height: 4rem;
+				font-size: 3rem;
 			}
 
 			#titleBar {
@@ -2920,7 +2940,6 @@ input, select, textarea {
 
 			#banner {
 				padding: 6em 0;
-				margin: 2em 0 0 0;
 			}
 
 				#banner header {
