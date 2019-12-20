@@ -2123,7 +2123,7 @@ input, select, textarea {
 		position: relative;
 		background: #fff;
 		border-bottom: solid 1px #ccc;
-		text-align: right;
+		text-align: left;
 	}
 
 		#header h1 {
@@ -2912,7 +2912,7 @@ input, select, textarea {
 		/* Header */
 
 			#header {
-				text-align: center;
+				text-align: left;
 				padding: 2em 0;
 			}
 
