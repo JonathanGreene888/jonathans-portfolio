@@ -98,11 +98,12 @@
 													<header>
 														<h3>Autoreviewforyou.com</h3>
 													</header>
-													<p class="content">My team was tasked with building a fully responsive car review website that would allow people to pay a membership fee and access users car reviews. We chose to build this using the MERN stack. Using a flat art design with minimalist features allowed for a simple intuitive user experience. Integrating with the stripe api we were able to accept payments with automatic-billing for subscriptions.</p>
+													<p class="content">Over the course of five weeks. I developed primarily on the front end including all billing pages and subscription models. This included integration with the Stripe API for both our React front-end and Node backend. Aside from this I built out the lockout mechanism to limit how many reviews for each subscription model.  I setup front-end testing using Jest and Enzyme and Implemented edit functionality for all reviews with a star rating system.</p>
 													<footer>
 														<ul class="actions">
 															<li><a href="https://autoreviewforyou.herokuapp.com/" target="_blank" class="button alt">View App Here</a></li>
 														</ul>
+														<!-- <span className="pill"> JavaScript </span> <button className="pill"> React </button> <button className="pill"> Node </button> <button className="pill"> API Utilization </button> -->
 													</footer>
 												</section>
 											</div>
@@ -132,6 +133,7 @@
 														<ul class="actions">
 															<li><a href="https://dream-flowers-lighting.herokuapp.com/" target="_blank" class="button alt">View App Here</a></li>
 														</ul>
+														 <!-- JavaScript | React | Redux | Node | API Utilization  -->
 													</footer>
 												</section>
 											</div>
@@ -139,7 +141,7 @@
 									</section>
 							</div>
 							<div id="contact" class="col-12">
-								<form name="contact" method="POST" data-netlify="true">
+								<form name="contact"  onsubmit=" return validateForm(event)" method="POST" data-netlify="true">
 									<p class="contact-field">
 									  <label>Name: <input type="text" name="name" /></label>   
 									</p>
@@ -167,7 +169,7 @@
 								<!-- Copyright -->
 									<div id="copyright">
 										<ul class="links">
-											<li>&copy; Jonathan Greene All rights reserved. Template provided by: HTML5up.net</li>
+											<li>&copy; Template provided by: HTML5up.net, Design and Customization by Jonathan Greene</li>
 										</ul>
 									</div>
 							</div>
@@ -184,6 +186,25 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			function validateForm(e) {
+				var contactForm = document.forms['contact'];
+				var contactName = contactForm.elements.name.value;
+				var contactEmail = contactForm.elements.email.value;
+				var contactMessage = contactForm.elements.message.value;
+				if(contactName === '' || contactEmail === '' || contactMessage === '' ) {
+					e.preventDefault();
+					alert('Please enter contact name, email and message')
+				}
+				if(contactName !== '' || contactEmail !== '' || contactMessage !== '' ){
+					e.currentTarget.submit()
+					alert('Thank you for your submission we will be in touch shortly.')
+				}
+			} 
+
+
+			
+			</script>
 
 	</body>
 </html>
