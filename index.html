@@ -17,7 +17,7 @@
 				<section id="header">
 					<nav id="nav">
 						<ul>
-							<li class="current"> <a href="#home">Home</a> </li>
+							<li class="current"> <a href="#header">Home</a> </li>
 							<li> <a href="#skills">Skills</a> </li>
 							<li> <a href="#projects">Projects</a> </li>
 							<li> <a href="#contact">Contact</a> </li>
@@ -30,10 +30,11 @@
 						<h1 class="name"> Jonathan Greene</h1>
 						<h3 class="title" >React Developer</h3>
 						<div class="picture-container"><p class="picture-text"> A life long learner that is living his dream of being a developer, bringing peoples visions to life, and creating amazing experiences for all. </p> </div>
-						
+		
 					</section>
 			<!-- Main -->
 				<section id="main">
+				
 					<div class="container">
 						<div class="row">
 								<div class="col-12">
@@ -141,6 +142,8 @@
 									</section>
 							</div>
 							<div id="contact" class="col-12">
+								<!-- The actual snackbar -->
+								<p id="snackbar"class="snackbar">Some text some message..</p>
 								<form name="contact"  onsubmit=" return validateForm(event)" method="POST" data-netlify="true">
 									<p class="contact-field">
 									  <label>Name: <input type="text" name="name" /></label>   
@@ -187,23 +190,38 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-			function validateForm(e) {
-				var contactForm = document.forms['contact'];
-				var contactName = contactForm.elements.name.value;
-				var contactEmail = contactForm.elements.email.value;
-				var contactMessage = contactForm.elements.message.value;
-				if(contactName === '' || contactEmail === '' || contactMessage === '' ) {
-					e.preventDefault();
-					alert('Please enter contact name, email and message')
+			function isValid(valid, e) {
+				let snackbar = document.getElementById("snackbar");
+				if(valid){
+					snackbar.innerHTML = "Thank you for your submission we will be in touch shortly.";
+					setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
+					snackbar.addEventListener("animationend", function() {
+						console.log("testing");
+						e.submit();
+				});
+				} else if(!valid) {
+					snackbar.innerHTML = "Please enter contact name, email and message";
+					setTimeout(function(){ snackbar.className = snackbar.className.replace("show", ""); }, 3000);
 				}
-				if(contactName !== '' || contactEmail !== '' || contactMessage !== '' ){
-					e.currentTarget.submit()
-					alert('Thank you for your submission we will be in touch shortly.')
+				snackbar.className = "show";
+				return;
+			}
+
+			function validateForm(e) {
+				e.preventDefault();
+				let contactForm = document.forms['contact'];
+				let contactName = contactForm.elements.name.value;
+				let contactEmail = contactForm.elements.email.value;
+				let contactMessage = contactForm.elements.message.value;
+
+				if(contactName === '' || contactEmail === '' || contactMessage === '' ) {
+					isValid(false, e.currentTarget)					
+				}
+				if(contactName !== '' && contactEmail !== '' && contactMessage !== '' ){
+					isValid(true, e.currentTarget)
 				}
 			} 
 
-
-			
 			</script>
 
 	</body>
