@@ -484,8 +484,6 @@ table {
 
 section,
 article {
-  margin-bottom: 2.5em;
-
   > :last-child,
   &:last-child {
     margin-bottom: 0;
@@ -1787,7 +1785,6 @@ ul.social {
 
   section,
   article {
-    margin-bottom: 20px;
   }
 
   header {
